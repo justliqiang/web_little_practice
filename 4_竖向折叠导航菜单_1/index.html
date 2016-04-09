@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>竖向展开的折叠菜单</title>
+	<style type="text/css">
+		/*全局设定*/
+		.nav{position: absolute;top:100px;left: 100px;}
+		*{margin: 0;padding: 0;font-size: 14px;font-size: "微软雅黑";}
+		ul{list-style: none;}
+		.nav a{text-decoration: none;display: block;width: 135px;height: 30px;line-height: 30px;color: #fff;text-align: center;}		
+		/*一级列表设定*/
+		.a1{font-size: 16px;height: 35px;line-height: 35px;}
+		.nav{background-color: #888;}
+		.li0{border-top: 2px solid #bbb;}
+		.li0:first-child{border: 0;}
+		/*二级列表设定*/
+		.nav1{display: none;background-color: #bbb;}
+		/*伪类*/
+		.li0:hover .a1{background-color: #444;font-weight: bold;font-size: 17px;}
+		.nav1 a:hover{background-color: #f60;font-weight: bold;font-size: 15px;}
+	</style>
+
+</head>
+<body>
+	<ul class="nav">
+		<li class="li0"><a class="a1" href="javascript:myclick1()">草帽海贼团</a>
+			<ul class="nav1" id="nav101">
+				<li class="li1"><a href="">路飞</a></li>
+				<li class="li1"><a href="">索隆</a></li>
+				<li class="li1"><a href="">山治</a></li>
+			</ul>
+		</li>
+		<li class="li0"><a class="a1" href="javascript:myclick2()">海军</a>
+			<ul class="nav1" id="nav102">
+				<li class="li1"><a href="">黄猿</a></li>
+				<li class="li1"><a href="">青雉</a></li>
+				<li class="li1"><a href="">赤犬</a></li>
+			</ul>
+		</li>
+		<li class="li0"><a class="a1" href="javascript:myclick3()">现任王下七武海</a>
+			<ul class="nav1" id="nav103">
+				<li class="li1"><a href="">汉库克</a></li>
+				<li class="li1"><a href="">米霍克</a></li>
+				<li class="li1"><a href="">熊</a></li>
+				<li class="li1"><a href="">巴基</a></li>
+				<li class="li1"><a href="">白胡子二世</a></li>
+
+			</ul>
+		</li>
+		<li class="li0"><a class="a1" href="javascript:myclick4()">革命军</a>
+			<ul class="nav1" id="nav104">
+				<li class="li1"><a href="">龙</a></li>
+				<li class="li1"><a href="">萨博</a></li>
+				<li class="li1"><a href="">人妖王</a></li>
+			</ul>
+		</li>
+		<li class="li0"><a class="a1" href="javascript:myclick5()">现任四皇</a>
+			<ul class="nav1" id="nav105">
+				<li class="li1"><a href="">香克斯</a></li>
+				<li class="li1"><a href="">凯多</a></li>
+				<li class="li1"><a href="">玲玲</a></li>
+				<li class="li1"><a href="">蒂奇</a></li>
+
+			</ul>
+		</li>
+	</ul>
+	<!-- JS代码，为每一个元素单独设置点击事件，如果元素太多了一个一个设置会相当麻烦 -->
+	<script type="text/javascript">
+		function myclick1(){
+			var x = document.getElementById("nav101");
+			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+		} 
+		function myclick2(){
+			var x = document.getElementById("nav102");
+			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+		} 
+		function myclick3(){
+			var x = document.getElementById("nav103");
+			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+		} 
+		function myclick4(){
+			var x = document.getElementById("nav104");
+			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+		} 
+		function myclick5(){
+			var x = document.getElementById("nav105");
+			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+		} 
+	</script>
+</body>
+</html>
