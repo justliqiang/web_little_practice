@@ -67,25 +67,33 @@
 	</ul>
 	<!-- JS代码，为每一个元素单独设置点击事件，如果元素太多了一个一个设置会相当麻烦 -->
 	<script type="text/javascript">
+		var arr2=document.getElementsByClassName("nav1");	
+		function allNone(){
+			//_______for循环开始，为了在触发新的展开事件时候，使已经展开的都变回折叠状态。
+			for (var i = 0; i < arr2.length; i++) {
+				arr2[i].style.display="none";
+			}
+			//_______for循环结束。			
+		}	
 		function myclick1(){
 			var x = document.getElementById("nav101");
-			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+			if (x.style.display=="block") {x.style.display="none";}else{allNone();x.style.display="block";}
 		} 
 		function myclick2(){
 			var x = document.getElementById("nav102");
-			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+			if (x.style.display=="block") {x.style.display="none";}else{allNone();x.style.display="block";}
 		} 
 		function myclick3(){
 			var x = document.getElementById("nav103");
-			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+			if (x.style.display=="block") {x.style.display="none";}else{allNone();x.style.display="block";}
 		} 
 		function myclick4(){
 			var x = document.getElementById("nav104");
-			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+			if (x.style.display=="block") {x.style.display="none";}else{allNone();x.style.display="block";}
 		} 
 		function myclick5(){
 			var x = document.getElementById("nav105");
-			if (x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+			if (x.style.display=="block") {x.style.display="none";}else{allNone();x.style.display="block";}
 		} 
 	</script>
 </body>

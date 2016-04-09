@@ -74,16 +74,21 @@
 		var arr2=document.getElementsByClassName("nav1");
 		for (var i = 0; i < arr1.length; i++) {
 			arr1[i].onclick=function change(){
-			var x = this.parentNode.childNodes;
-			for (var j = 0; j < x.length; j++) {
-					if (x[j].className=="nav1") {
-					if(x[j].style.display=="block") {
-							x[j].style.display="none";
-					}else{
-							x[j].style.display="block";
-					}
-				}
-			};
+				var x = this.parentNode.childNodes;
+				for (var j = 0; j < x.length; j++) {
+						if (x[j].className=="nav1") {
+							if(x[j].style.display=="block") {
+								x[j].style.display="none";
+							}else{
+								//_______for循环开始，为了在触发新的展开事件时候，使已经展开的都变回折叠状态。
+								for (var k = 0; k < arr2.length; k++) {
+								arr2[k].style.display="none";
+								}
+								//_______for循环结束。
+								x[j].style.display="block";
+							}
+						}
+				};
 			};
 		}
 	</script>

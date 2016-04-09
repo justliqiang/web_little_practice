@@ -71,6 +71,7 @@
 		 *访问兄弟节点时候，判断是不是我们要找的节点，这里通过判断节点类型来确定，不是的话找下一个节点，知道满足条件。
 		 */
 		var arr1=document.getElementsByClassName("a1");
+		var arr2=document.getElementsByClassName("nav1");		
 		for (var i = 0; i < arr1.length; i++) {
 			arr1[i].onclick=function change(){
 				var x = this.nextSibling;
@@ -82,7 +83,16 @@
 				}else{
 					x.style.display="none";
 				}*/
-				if(x.style.display=="block") {x.style.display="none";}else{x.style.display="block";}
+				if(x.style.display=="block") {
+					x.style.display="none";
+				}else{
+					//_______for循环开始，为了在触发新的展开事件时候，使已经展开的都变回折叠状态。
+					for (var j = 0; j < arr2.length; j++) {
+						arr2[j].style.display="none";
+					}
+					//_______for循环结束。
+					x.style.display="block";
+				}
 				//上面两种if顺序，第一种点第一次没效果，是display开始不等于"none"吗
 			};
 		}
