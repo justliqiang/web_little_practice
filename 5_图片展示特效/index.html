@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>欢迎来到Clannad的世界</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.content,.content_1{
+			margin: 0 auto;
+			width: 1280px;
+			height: 290px;
+			border: 1 solid black;
+		}
+		ul{list-style: none;}
+		ul img{
+			width: 400px;
+			height:300px; 
+			border: 0px;
+			z-index: 20;
+		}
+		ul li{
+			float: left;
+		}
+		/*content*/
+		.content ul li{
+			
+			width: 400px;
+			position: relative;
+			margin-right: 5px;
+		}
+		.content a{
+			text-decoration: none;
+			display: block;
+			width: 400px;
+			height: 300px;
+			border: 2px solid gray;
+		}
+		
+		ul li span{
+			display: none;
+			position: absolute;
+			bottom: 2px;
+			left: 2px;
+			z-index: 30;
+			width: 400px;
+			height:30px;
+			line-height: 30px;
+			text-align: left;
+
+			color: white;
+			background-color: black;
+
+			opacity: 0.5;
+			filter: Alpha(opacity=50);/*IE8*/
+			font-weight: bold;
+			font-family: "Arial";
+		}
+		.a0:hover span{display: block;}
+		.a0:hover{border: 2px solid red;} 
+		/*content_1*/
+		.content_1 ul li{
+			
+			width: 400px;
+			height: 300px;
+			position: relative;
+			margin-right: 1px;
+			border: 2px solid gray;
+			overflow: hidden;
+		}
+		.content_1 a{
+			text-decoration: none;
+			display: block;
+			width: 400px;
+			height: 300px;
+			position: absolute;
+			top: 270px;
+			background-color: black;
+			color: white;
+			font-weight: bold;
+			font-family: "Arial";
+			line-height: 30px;
+			opacity: 0.5;
+			filter: Alpha(opacity=50);/*IE8*/
+		}
+		/*.content_1 li:hover .a1{top: 0;}*/
+		/*也可以不用JS，用css来完成*/
+	</style>
+
+</head>
+<body>
+	<div class="content">
+		<ul>
+			<li>
+				<a class="a0"  href="">
+					<img src="images/1.jpg">
+					<span>欢迎来到Clannad的世界</span>
+				</a>
+			</li>
+			<li>
+				<a class="a0"  href="">
+					<img src="images/2.jpg">
+					<span>欢迎来到Clannad的世界</span>
+				</a>
+			</li>
+			<li>
+				<a class="a0"  href="">
+					<img src="images/3.jpg">
+					<span>欢迎来到Clannad的世界</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="content_1" id="content1">
+		<ul id="ul1">
+			<li class="li1">			
+				<img src="images/1.jpg">
+				<a class="a1" href="">欢迎来到Clannad的世界<br />《CLANNAD》是日本游戏品牌Key继《Kanon》、《AIR》后发行的第三款恋爱冒险游戏，游戏于2004年4月28日发行PC初回限定版，并依此为原作改编或扩充跨媒体制作的作品。由京都动画改编成TV版动画作品。</a>			
+			</li>
+			<li class="li1">			
+				<img src="images/2.jpg">
+				<a class="a1" href="">欢迎来到Clannad的世界<br />《CLANNAD》是日本游戏品牌Key继《Kanon》、《AIR》后发行的第三款恋爱冒险游戏，游戏于2004年4月28日发行PC初回限定版，并依此为原作改编或扩充跨媒体制作的作品。由京都动画改编成TV版动画作品。</a>			
+			</li>
+			<li class="li1">			
+				<img src="images/3.jpg">
+				<a class="a1" href="">欢迎来到Clannad的世界<br />《CLANNAD》是日本游戏品牌Key继《Kanon》、《AIR》后发行的第三款恋爱冒险游戏，游戏于2004年4月28日发行PC初回限定版，并依此为原作改编或扩充跨媒体制作的作品。由京都动画改编成TV版动画作品。</a>			
+			</li>
+		</ul>
+	</div>
+	<script>
+	    var myli = document.getElementById('ul1').getElementsByTagName('li');
+			for(var i =0 ;i<myli.length;i++){
+				myli[i].onmouseover = showMeg;
+				myli[i].onmouseout = hideMeg;//这里注意，只写函数名
+			}
+			function showMeg(){
+				this.getElementsByTagName('a')[0].style.top = 0;
+			}
+			function hideMeg(){
+				this.getElementsByTagName('a')[0].style.top = "	270px";
+			}
+	</script>
+</body>
+</html>
