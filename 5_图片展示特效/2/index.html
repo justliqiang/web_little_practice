@@ -1,0 +1,105 @@
+<!-- 
+0.如果您有指教之处，请联系:helloliyunfan@163.com，感谢赐教。
+1.思路：先布局，再把包含文字的部分绝对定位到图片内部下方，鼠标滑过时，文字部分上移。或者使用JS改变绝对定位的位置，onmouseover，onmouseout。
+2.遮罩层使用到透明度opacity。
+3.:hover，只能改变元素本身，或者其内部某些元素。
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片展示效果2</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.content{width:1280px;margin: 0 auto;background-color: green;}
+		.content ul{list-style: none;}
+		.content li{float: left;margin:10px;}
+		.content a{	display: block;
+			width: 400px;
+			height: 300px;
+			border: 3px solid gray;
+			text-decoration: none;
+			position: relative;
+			overflow: hidden;
+		}
+		.content img{
+			width: 400px;
+			height: 300px;
+		}
+		.content p{
+			display: block;
+			width: 400px;
+			height: 70px;
+			color: white;
+			line-height: 35px;
+			text-indent: 25px;
+			font-weight: bold;
+			font-family: "Arial";
+			font-size: 20px;
+			background: black;
+			position: absolute;
+			left: 0;
+			top: 265px;
+			opacity: 0.7;
+		}
+		.content p span{
+			text-indent: 25px;
+			display: block;
+			font-style: italic;
+			font-size: 18px;
+		}
+		.content a:hover p{
+			/*transition:opacity 0.5s;*/
+			opacity: 0.6;
+			top: 230px;
+		}
+		.content a:hover {
+			border:3px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="">
+					<img src="images/1.jpg">
+					<p>海贼王<br/><span>第 460话 顶上战争</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/2.jpg">
+					<p>火影忍者<br/><span>第 9话 写轮眼卡卡西</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/3.jpg">
+					<p>一拳超人<br/><span>第 1话 最强之人</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/4.jpg">
+					<p>Clannad AS<br/><span>第 22话 小小的手心</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/5.jpg">
+					<p>银魂<br/><span>第 101话 真选组动乱篇</span></p>
+					<span>银魂</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/6.jpg">
+					<p>未闻花名<br/><span>第 7话 真正的愿望</span></p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

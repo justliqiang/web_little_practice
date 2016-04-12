@@ -1,0 +1,108 @@
+<!-- 
+0.如果您有指教之处，请联系:helloliyunfan@163.com，感谢赐教。
+1.思路：先布局，再把包含文字的部分绝对定位到图片内部下方，鼠标滑过时，文字部分上移。或者使用JS改变绝对定位的位置，onmouseover，onmouseout。
+2.遮罩层使用到透明度opacity。
+3.:hover，只能改变元素本身，或者其内部某些元素。
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片展示效果3</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.content{width:1280px;margin: 0 auto;background-color: green;}
+		.content ul{list-style: none;}
+		.content li{float: left;margin:10px;}
+		.content a{	display: block;
+			width: 400px;
+			height: 300px;
+			border: 3px solid gray;
+			text-decoration: none;
+			position: relative;
+			overflow: hidden;
+		}
+		.content img{
+			width: 400px;
+			height: 300px;
+		}
+		.content p{
+			display: block;
+			width: 400px;
+			height: 300px;
+			color: white;
+			line-height: 35px;
+			text-indent: 25px;
+			font-weight: bold;
+			font-family: "Arial";
+			font-size: 20px;
+			background: black;
+			position: absolute;
+			left: 0;
+			top: 265px;
+			opacity: 0.6;
+		}
+		.content p span{
+			text-indent: 25px;
+			display: block;
+			font-weight: normal;
+			/*font-style: italic;*/
+			font-size: 16px;
+		}
+		.content a:hover p{
+			/*transition:opacity 0.5s;*/
+			opacity: 0.8;
+			top: 0;
+
+		}
+		.content a:hover {
+			border:3px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="">
+					<img src="images/1.jpg">
+					<p>海贼王<br/><span>《ONE PIECE》（海贼王、航海王）简称“OP”，是日本漫画家尾田荣一郎作画的少年漫画作品。在《周刊少年Jump》1997年34号开始连载。描写了拥有橡皮身体戴草帽的青年路飞，以成为“海贼王”为目标和同伴在大海展开冒险的故事。</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/2.jpg">
+					<p>火影忍者<br/><span>《火影忍者》是日本漫画家岸本齐史的代表作，作品于1999年开始在《周刊少年JUMP》上连载，于2014
+					年11月10日发售的JUMP第50号完结。</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/3.jpg">
+					<p>一拳超人<br/><span>《一拳超人》，又译《一击男》，是日本网络漫画家ONE的幽默格斗漫画，该作品以一个漫画原稿软件ComicStudio PC 制作，于2009年7月3日在ONE的个人网站开始连载，虽然画功粗糙，但却于日本网络大热，根据日本NHK2012年9月2日播出的“网络漫画革命”调查，《一拳超人》于该年观看总数超过1000万次，平均每天有高达20,000点击。现在持续于ONE的网站连载中。</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/4.jpg">
+					<p>Clannad AS<br/><span>《CLANNAD～AFTER STORY～》是由京都动画根据Key社同名游戏《CLANNAD》改编的电视动画，也是电视动画《CLANNAD》的第2期作品。</span></p>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/5.jpg">
+					<p>银魂<br/><span>《银魂》是由日本漫画家空知英秋创作的的一部连载中少年漫画作品，从2004年2号的《周刊少年Jump》开始连载。该作是以科幻时代剧为题材的搞笑漫画。以风格独特的毒舌、吐槽、无厘头、异想天开的恶搞，为作品的特色与卖点，同时不时穿插感人的故事，以及人生道理的描写。</span></p>
+					<span>银魂</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/6.jpg">
+					<p>未闻花名<br/><span>《我们仍未知道那天所看见的花的名字》是由日本动画公司A-1 Pictures制作的原创电视动画，于2011年4月14日起在日本富士电视台的“noitaminA”节目播出，全11集。官方的简称为“那朵花”，在中国通常又被称为“未闻花名”。</span></p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
