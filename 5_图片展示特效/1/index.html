@@ -1,0 +1,99 @@
+<!-- 
+0.如果您有指教之处，请联系:helloliyunfan@163.com，感谢赐教。
+1.思路：先布局，再把包含文字的部分绝对定位到图片内部下方，透明度为0，鼠标滑过时，改变透明度。
+2.也可以把文字部分开始时候设置为隐藏，鼠标滑过时候，变为block;
+3.或者把文字部分开始时候定位到图片正下方，鼠标滑过时，文字部分变为定位到图片内部下方。
+4.:hover，只能改变元素本身，或者其内部某些元素。
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片展示效果1</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		.content{width:1280px;margin: 0 auto;background-color: green;}
+		.content ul{list-style: none;}
+		.content li{float: left;margin:10px;}
+		.content a{	display: block;
+			width: 400px;
+			height: 300px;
+			border: 3px solid gray;
+			text-decoration: none;
+			position: relative;
+		}
+		.content img{
+			width: 400px;
+			height: 300px;
+		}
+		.content span{
+			display: block;
+			width: 400px;
+			height: 40px;
+			color: white;
+			line-height: 40px;
+			text-indent: 25px;
+			font-weight: bold;
+			font-family: "Arial";
+			font-size: 20px;
+			background: black;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			opacity: 0;
+			filter: Alpha(opacity=0);
+		}
+		.content a:hover span{
+			opacity: 0.7;
+			filter: Alpha(opacity=70);
+			/*transition:opacity 0.5s;*/
+		}
+		.content a:hover {
+			border:3px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<ul>
+			<li>
+				<a href="">
+					<img src="images/1.jpg">
+					<span>海贼王</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/2.jpg">
+					<span>火影忍者</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/3.jpg">
+					<span>一拳超人</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/4.jpg">
+					<span>Clannad AS</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/5.jpg">
+					<span>银魂</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/6.jpg">
+					<span>未闻花名</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
